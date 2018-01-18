@@ -2,6 +2,8 @@ class V2D {
 
     constructor() {
 
+        this.precision = 30; // accuracy in floats
+
         if (arguments.length === 2) { // (0,0)
             this.x = arguments[0];
             this.y = arguments[1];
@@ -21,6 +23,14 @@ class V2D {
      */
     clone() {
         return new V2D(this.x, this.y);
+    }
+
+    /**
+     * precise's the given value
+     * @returns {Number}
+     */
+    precise(num) {
+        return num.toFixed(this.precision) / 1;
     }
 
     // ---------------------------
@@ -79,7 +89,7 @@ class V2D {
     get length() {
         let x = this.x;
         let y = this.y;
-        return Math.sqrt(x * x + y * y);
+        return this.precise(Math.sqrt(x * x + y * y));
     }
 
     /**
@@ -96,7 +106,7 @@ class V2D {
      * @return {Number}
      */
     get angle() {
-        return Math.atan2(this.x, this.y) * 180 / Math.PI;
+        return this.precise(Math.atan2(this.x, this.y) * 180 / Math.PI);
     }
 
     /**
@@ -104,7 +114,7 @@ class V2D {
      * @return {Number}
      */
     get angleRD() {
-        return Math.atan2(this.x, this.y);
+        return this.precise(Math.atan2(this.x, this.y));
     }
 
 }
