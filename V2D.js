@@ -142,6 +142,16 @@ class V2D {
         return this.resize(this.length / size);
     }
 
+    /**
+     * returns the distance to "vec"
+     * @param {V2D} vec 
+     * @returns {Number}
+     */
+    distanceTo(vec) {
+        return this.clone().subtract(vec).length;
+    }
+
+
     // ---------------------------
     //          getters
     // ---------------------------
