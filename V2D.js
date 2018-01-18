@@ -67,4 +67,44 @@ class V2D {
         return this;
     }
 
+
+    // ---------------------------
+    //          getters
+    // ---------------------------
+
+    /**
+     * returns the length (magnitude) of vector
+     * @return {Number}
+     */
+    get length() {
+        let x = this.x;
+        let y = this.y;
+        return Math.sqrt(x * x + y * y);
+    }
+
+    /**
+     * returns the normalized clone of vector (length to 1)
+     * @return {V2D}
+     */
+    get normalized() {
+        let cloned = this.clone();
+        return cloned.normalize(); // TODO: create this.normalize() method
+    }
+
+    /**
+     * returns the angle of vector (degrees)
+     * @return {Number}
+     */
+    get angle() {
+        return Math.atan2(this.x, this.y) * 180 / Math.PI;
+    }
+
+    /**
+     * returns the angle of vector (radians)
+     * @return {Number}
+     */
+    get angleRD() {
+        return Math.atan2(this.x, this.y);
+    }
+
 }
