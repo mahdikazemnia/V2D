@@ -98,6 +98,18 @@ class V2D {
         return this.resize(1);
     }
 
+    /**
+     * limits the vector's length by "min" and "max"
+     * @param {Number} min 
+     * @param {Number} max 
+     */
+    limit(min, max) {
+        let len = this.length;
+        if (len > max) this.resize(max);
+        else if (len < min) this.resize(min);
+        return this;
+    }
+
     // ---------------------------
     //          getters
     // ---------------------------
@@ -118,7 +130,7 @@ class V2D {
      */
     get normalized() {
         let cloned = this.clone();
-        return cloned.normalize(); // TODO: create this.normalize() method
+        return cloned.normalize();
     }
 
     /**
