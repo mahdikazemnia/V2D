@@ -12,7 +12,15 @@ class V2D {
             this.x = arguments[0].x;
             this.y = arguments[0].y;
         }
-        
+
+    }
+
+    /**
+     * returns a cloned vector which won't affect this one
+     * @returns {V2D}
+     */
+    clone() {
+        return new V2D(this.x, this.y);
     }
 
 }
