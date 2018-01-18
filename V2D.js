@@ -153,6 +153,20 @@ class V2D {
 
 
     // ---------------------------
+    //      angle & direction 
+    // ---------------------------
+
+    /**
+     * reverses the vector (rotate 180 degree)
+     */
+    reverse() {
+        this.x *= -1;
+        this.y *= -1;
+        return this;
+    }
+
+
+    // ---------------------------
     //          getters
     // ---------------------------
 
