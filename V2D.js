@@ -247,3 +247,5 @@ class V2D {
     }
 
 }
+
+module.exports = V2D;
