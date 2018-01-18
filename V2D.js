@@ -186,6 +186,26 @@ class V2D {
         return this.rotateTo(degrees);
     }
 
+    /**
+     * rotates the vector to the radians
+     * @param {number} radians
+     */
+    rotateToRD(radians) {
+        let len = this.length;
+        this.x = this.precise(Math.cos(radians) * len);
+        this.y = this.precise(Math.sin(radians) * len);
+        return this;
+    }
+
+    /**
+     * rotates the vector by the radians
+     * @param {number} radians
+     */
+    rotateRD(radians) {
+        radians += this.angleRD;
+        return this.rotateTo(radains);
+    }
+
 
     // ---------------------------
     //          getters
