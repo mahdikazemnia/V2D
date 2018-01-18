@@ -235,7 +235,7 @@ class V2D {
      * @return {Number}
      */
     get angle() {
-        return this.precise(Math.atan2(this.x, this.y) * 180 / Math.PI);
+        return this.precise(Math.atan2(this.y, this.x) * 180 / Math.PI);
     }
 
     /**
@@ -243,7 +243,7 @@ class V2D {
      * @return {Number}
      */
     get angleRD() {
-        return this.precise(Math.atan2(this.x, this.y));
+        return this.precise(Math.atan2(this.y, this.x));
     }
 
 }
