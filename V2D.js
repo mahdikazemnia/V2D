@@ -110,6 +110,38 @@ class V2D {
         return this;
     }
 
+    /**
+     * adds the size to vector's length 
+     * @param {Number} size
+     */
+    addSize(size) {
+        return this.resize(this.length + size);
+    }
+
+    /**
+     * subtracts the size from vector's length 
+     * @param {Number} size
+     */
+    subtractSize(size) {
+        return this.resize(this.length - size);
+    }
+
+    /**
+     * multiplies vector's length by the size
+     * @param {Number} size
+     */
+    multiplySize(size) {
+        return this.resize(this.length * size);
+    }
+
+    /**
+     * divides vector's length by the size
+     * @param {Number} size
+     */
+    divideSize(size) {
+        return this.resize(this.length / size);
+    }
+
     // ---------------------------
     //          getters
     // ---------------------------
