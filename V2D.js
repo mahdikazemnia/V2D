@@ -78,6 +78,26 @@ class V2D {
     }
 
 
+
+    // ---------------------------
+    //           size 
+    // ---------------------------
+
+    /**
+     * resizes the vector to "size"
+     * @param {Number} size
+     */
+    resize(size) {
+        return this.multiply(size / this.length);
+    }
+
+    /**
+     * normalizes the vector (sets length to 1)
+     */
+    normalize() {
+        return this.resize(1);
+    }
+
     // ---------------------------
     //          getters
     // ---------------------------
