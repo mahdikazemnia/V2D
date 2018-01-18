@@ -23,4 +23,48 @@ class V2D {
         return new V2D(this.x, this.y);
     }
 
+    // ---------------------------
+    //          + - * /
+    // ---------------------------
+
+    /**
+     * adds the "von" to this vector (vector or Number)
+     * @param {V2D | Number} von 
+     */
+    add(von) {
+        this.x += von.x !== undefined ? von.x : von;
+        this.y += von.y !== undefined ? von.y : von;
+        return this;
+    }
+
+    /**
+     * subtracts the "von" from this vector (vector or Number)
+     * @param {V2D | Number} von 
+     */
+    subtract(von) {
+        this.x -= von.x !== undefined ? von.x : von;
+        this.y -= von.y !== undefined ? von.y : von;
+        return this;
+    }
+
+    /**
+     * multiplies this vector by "von" (vector or Number)
+     * @param {V2D | Number} von 
+     */
+    multiply(von) {
+        this.x *= von.x !== undefined ? von.x : von;
+        this.y *= von.y !== undefined ? von.y : von;
+        return this;
+    }
+
+    /**
+     * divides this vector to "von" (vector or Number)
+     * @param {V2D | Number} von 
+     */
+    divide(von) {
+        this.x /= von.x !== undefined ? von.x : von;
+        this.y /= von.y !== undefined ? von.y : von;
+        return this;
+    }
+
 }
