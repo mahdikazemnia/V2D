@@ -1,4 +1,4 @@
-class Vector2D {
+class V2D {
 
     constructor() {
 
@@ -19,10 +19,10 @@ class Vector2D {
 
     /**
      * returns a cloned vector which won't affect this one
-     * @returns {Vector2D}
+     * @returns {V2D}
      */
     clone() {
-        return new Vector2D(this.x, this.y);
+        return new V2D(this.x, this.y);
     }
 
     /**
@@ -39,7 +39,7 @@ class Vector2D {
 
     /**
      * adds the "von" to this vector (vector or Number)
-     * @param {Vector2D | Number} von 
+     * @param {V2D | Number} von 
      */
     add(von) {
         this.x += von.x !== undefined ? von.x : von;
@@ -49,7 +49,7 @@ class Vector2D {
 
     /**
      * subtracts the "von" from this vector (vector or Number)
-     * @param {Vector2D | Number} von 
+     * @param {V2D | Number} von 
      */
     subtract(von) {
         this.x -= von.x !== undefined ? von.x : von;
@@ -59,7 +59,7 @@ class Vector2D {
 
     /**
      * multiplies this vector by "von" (vector or Number)
-     * @param {Vector2D | Number} von 
+     * @param {V2D | Number} von 
      */
     multiply(von) {
         this.x *= von.x !== undefined ? von.x : von;
@@ -69,7 +69,7 @@ class Vector2D {
 
     /**
      * divides this vector to "von" (vector or Number)
-     * @param {Vector2D | Number} von 
+     * @param {V2D | Number} von 
      */
     divide(von) {
         this.x /= von.x !== undefined ? von.x : von;
@@ -144,7 +144,7 @@ class Vector2D {
 
     /**
      * returns the distance to "vec"
-     * @param {Vector2D} vec 
+     * @param {V2D} vec 
      * @returns {Number}
      */
     distanceTo(vec) {
@@ -223,7 +223,7 @@ class Vector2D {
 
     /**
      * returns the normalized clone of vector (length to 1)
-     * @return {Vector2D}
+     * @return {V2D}
      */
     get normalized() {
         let cloned = this.clone();
@@ -248,4 +248,4 @@ class Vector2D {
 
 }
 
-module.exports = Vector2D;
+module.exports = V2D;

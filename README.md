@@ -1,3 +1,3 @@
-# vector-2d
+# vectors-2d
 2D Vector Operations
-(on npm as "vector-2d")
+(on npm as "vectors-2d")
