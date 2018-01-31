@@ -2,7 +2,7 @@ class Vector2D {
 
     constructor() {
 
-        this.precision = 30; // accuracy in floats
+        this.precision = 20; // accuracy in floats (0 to 20)
 
         if (arguments.length === 2) { // (0,0)
             this.x = arguments[0];
