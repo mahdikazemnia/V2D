@@ -4,17 +4,22 @@ class V2D {
 
         this.precision = 20; // accuracy in floats (0 to 20)
 
-        if (arguments.length === 2) { // (0,0)
-            this.x = arguments[0];
-            this.y = arguments[1];
-        } else if (Array.isArray(arguments[0])) { // ([0,0])
-            this.x = arguments[0][0];
-            this.y = arguments[0][1];
-        } else { // ({x:0, y:0})
-            this.x = arguments[0].x;
-            this.y = arguments[0].y;
-        }
+        // set x and y
+        this.reset(arguments);
 
+    }
+
+    reset(coords) {
+        if (coords.length === 2) { // (0,0)
+            this.x = coords[0];
+            this.y = coords[1];
+        } else if (Array.isArray(coords[0])) { // ([0,0])
+            this.x = coords[0][0];
+            this.y = coords[0][1];
+        } else { // ({x:0, y:0})
+            this.x = coords[0].x;
+            this.y = coords[0].y;
+        }
     }
 
     /**
