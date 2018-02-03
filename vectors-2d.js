@@ -246,6 +246,14 @@ class V2D {
         return this.precise(Math.atan2(this.y, this.x));
     }
 
+    /**
+     * returns the incline of vector (y/x)
+     * @return {Number}
+     */
+    get incline() {
+        return this.y / this.x;
+    }
+
 }
 
 module.exports = V2D;
