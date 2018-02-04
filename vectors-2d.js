@@ -5,21 +5,24 @@ class V2D {
         this.precision = 20; // accuracy in floats (0 to 20)
 
         // set x and y
-        this.reset(arguments);
+        if (arguments.length === 2) { // (0,0)
+            this.reset(arguments[0], arguments[1]);
+        } else if (Array.isArray(arguments[0])) { // ([0,0])
+            this.reset(arguments[0][0], arguments[0][1]);
+        } else { // ({x:0, y:0})
+            this.reset(arguments[0].x, arguments[1].y);
+        }
 
     }
 
-    reset(coords) {
-        if (coords.length === 2) { // (0,0)
-            this.x = coords[0];
-            this.y = coords[1];
-        } else if (Array.isArray(coords[0])) { // ([0,0])
-            this.x = coords[0][0];
-            this.y = coords[0][1];
-        } else { // ({x:0, y:0})
-            this.x = coords[0].x;
-            this.y = coords[0].y;
-        }
+    /**
+     * set's x and y
+     * @param {Number} x 
+     * @param {Number} y 
+     */
+    reset(x, y) {
+        this.x = x;
+        this.y = y;
     }
 
     /**
