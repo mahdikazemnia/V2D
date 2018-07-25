@@ -16,13 +16,19 @@ class V2D {
     }
 
     /**
-     * set's x and y
-     * @param {Number} x 
+     * set's x and y, pass 2 numbers or a V2D
+     * @param {Number | V2D} x 
      * @param {Number} y 
      */
     reset(x, y) {
-        this.x = x;
-        this.y = y;
+        if (y) {
+            this.x = x;
+            this.y = y;
+            return this;
+        } // else
+        this.x = x.x;
+        this.y = x.y;
+        return this;
     }
 
     /**
