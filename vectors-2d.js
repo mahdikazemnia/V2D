@@ -21,7 +21,7 @@ class V2D {
      * @param {Number} y 
      */
     reset(x, y) {
-        if (y) {
+        if (y !== undefined) {
             this.x = x;
             this.y = y;
             return this;
