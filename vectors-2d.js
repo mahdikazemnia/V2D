@@ -102,7 +102,8 @@ class V2D {
      * @param {Number} size
      */
     resize(size) {
-        return this.multiply(size / this.length);
+        if (this.length) return this.multiply(size / this.length);
+        else return this.reset(0, 0);
     }
 
     /**
