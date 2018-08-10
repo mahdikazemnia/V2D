@@ -1,0 +1,24 @@
+{
+  "name": "vectors-2d",
+  "version": "0.1.1",
+  "description": "2d vector operations in js",
+  "main": "vectors-2d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdikazemnia/vectors-2d.git"
+  },
+  "keywords": [
+    "vector",
+    "vectors",
+    "2d"
+  ],
+  "author": "Mehdi Kazemnia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehdikazemnia/vectors-2d/issues"
+  },
+  "homepage": "https://github.com/mehdikazemnia/vectors-2d#readme"
+}
