@@ -10,7 +10,7 @@ class V2D {
         } else if (Array.isArray(arguments[0])) { // ([0,0])
             this.reset(arguments[0][0], arguments[0][1]);
         } else { // ({x:0, y:0})
-            this.reset(arguments[0].x, arguments[1].y);
+            this.reset(arguments[0].x, arguments[0].y);
         }
 
     }
